@@ -14,12 +14,9 @@
 
   <license>MIT</license>
 
-  <engines>
-    <engine name="cordova" version=">=3.5.0"/>
-  </engines>
 
-  <dependency id="cordova-custom-config" version=">=5.1.0" />
-  <dependency id="cordova-plugin-settings-hook" version=">=0.2.7" />
+  <hook type="before_plugin_install" src="hooks/installDependencies.js" />
+  <hook type="after_plugin_install" src="hooks/copy_resources.js" />
   
 
   <js-module name="AppIconChanger" src="www/AppIconChanger.js">
