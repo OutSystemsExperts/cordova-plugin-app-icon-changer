@@ -46,8 +46,8 @@ public class AppIconChanger extends CordovaPlugin {
 
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append(activity.getPackageName());
-            stringBuilder.append("." + activity.getClass().getSimpleName() + "__");
-            stringBuilder.append(iconName);
+            stringBuilder.append("." + iconName);
+            //stringBuilder.append(iconName);
 
             activeName = stringBuilder.toString();
 
@@ -126,7 +126,7 @@ public class AppIconChanger extends CordovaPlugin {
             appIcon.setImageResource(ic_launcherResId);
         } else {
             // get the id of the icon
-            int drawableID = activity.getResources().getIdentifier(iconName, "drawable", activity.getPackageName());
+            int drawableID = activity.getResources().getIdentifier(iconName, "mipmap", activity.getPackageName());
             appIcon.setImageResource(drawableID);
         }
 

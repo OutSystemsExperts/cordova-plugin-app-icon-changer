@@ -84,13 +84,13 @@ public class AppIconNameChanger {
             Log.e("ERROR", "Could not find icon, will try to set default");
 
             Resources activityRes = activity.getResources();
-            int default_icon_idResId = activityRes.getIdentifier("default_icon_id", "string", activity.getPackageName());
+            int default_icon_idResId = activityRes.getIdentifier("ic_launcher", "mipmap", activity.getPackageName());
             String defaultIconID = activityRes.getString(default_icon_idResId);
 
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append(packageName);
             //stringBuilder.append("." + activity.getClass().getSimpleName() + "_default");
-            stringBuilder.append("." + activity.getClass().getSimpleName() + "__" + defaultIconID);
+            stringBuilder.append("." + "DefaultIcon");
             activeName = stringBuilder.toString();
 
             try {
